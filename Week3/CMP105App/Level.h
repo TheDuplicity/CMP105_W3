@@ -23,11 +23,13 @@ private:
 	// Default variables for level class.
 	sf::RenderWindow* window;
 	Input* input;
-	sf::CircleShape circle;
+	sf::CircleShape circle, circleTwo;
 	sf::RectangleShape rectangle;
+	sf::Text speedText;
+	sf::Font aFont;
 
 	float deltaTime;
-	int cDirection, rDirection;
-
+	int cDirection, rxDirection, ryDirection, ctwoxDirection, ctwoyDirection;
+	float xSpd, ySpd;
 
 };
