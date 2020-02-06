@@ -61,10 +61,12 @@ void Level::handleInput(float dt)
 	}
 
 	if (input->isKeyDown(sf::Keyboard::Add)) {
-		xSpd++;
+		xSpd++;	
+		ySpd++;
 	}
 	if (input->isKeyDown(sf::Keyboard::Subtract)) {
 		xSpd--;
+		ySpd--;
 	}
 
 }
@@ -107,7 +109,7 @@ void Level::update(float dt)
 
 	circleTwo.setPosition((circleTwo.getPosition().x + (dt * xSpd * ctwoxDirection)), (circleTwo.getPosition().y + (dt * ySpd * ctwoyDirection)));
 
-	speedText.setString("Speed - " + std::to_string(sqrt(pow(xSpd, 2) + pow(xSpd, 2))));
+	speedText.setString("Speed - " + std::to_string(sqrt(pow(xSpd, 2) + pow(ySpd, 2))));
 
 }
 
